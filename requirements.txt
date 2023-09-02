@@ -6,3 +6,4 @@ numpy
 pandas
 fuzzywuzzy
 python-Levenshtein
+unidecode
