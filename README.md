@@ -4,14 +4,14 @@ brazilian-ecommerce-olist
 Data analysis on Brazilian E-commerce Public Dataset provided by Olist.
 
 The analysis entails the following steps:
-1. Thorough data understanding and preparation
+1. Thorough data understanding
 2. Spatial analysis
 3. Implementation of unsupervised and supervised machine leaning techniques
 4. Time series analysis
 5. Forecasting utilizing ARIMA
 6. Design of an informative data dashboard
 
-It's important to note that the data exploration phase is quite extensive. This is because this project also serves as a source of inspiration for automation and support tools in data analysis, which will be further developed as part of my current side project; the [`databridger` library on GitHub](https://github.com/vmichael89/databridger), which I am developing alongside my journey in data analytics. Some notable ideas for `databridger` being persued include:
+This project also serves as a source of inspiration for automation and supportive tasks in data analysis, which will be further developed as part of my current side project; the [`databridger` library on GitHub](https://github.com/vmichael89/databridger), which I am developing alongside my journey in data analytics. Some notable ideas for `databridger` being persued include:
 - **Automatic Column Classification**
 - **Generic Analysis of Inter-Table Key Relationships**: Identify primary and foreign keys.
 - **Issue Tracker Implementation**: A robust system to log, track, manage and document issues found during the analysis phase.
@@ -28,9 +28,8 @@ Project Organization
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── notebooks
+    │   ├── 1.0-initial-data-exploration
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting

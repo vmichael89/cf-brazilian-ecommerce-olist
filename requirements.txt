@@ -7,3 +7,4 @@ pandas
 fuzzywuzzy
 python-Levenshtein
 unidecode
+graphviz

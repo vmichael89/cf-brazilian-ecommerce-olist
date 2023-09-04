@@ -1,0 +1,58 @@
+digraph ERD {
+	olist_customers_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_customers_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="customer_id" align="left"><b><font face="DejaVu Sans" color='#F9C23C'>(⚷) customer_id</font></b></td> </tr><tr> <td port="customer_zip_code_prefix" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ customer_zip_code_prefix</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- customer_unique_id</td> </tr><tr> <td align="left">- customer_city</td> </tr><tr> <td align="left">- customer_state</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_geolocation_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_geolocation_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="geolocation_zip_code_prefix" align="left"><b><font face="DejaVu Sans" color='#F9C23C'>(⚷) geolocation_zip_code_prefix</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- geolocation_lat</td> </tr><tr> <td align="left">- geolocation_lng</td> </tr><tr> <td align="left">- geolocation_city</td> </tr><tr> <td align="left">- geolocation_state</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_orders_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_orders_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="order_id" align="left"><b><font face="DejaVu Sans" color='#F9C23C'>(⚷) order_id</font></b></td> </tr><tr> <td port="customer_id" align="left"><b><font face="DejaVu Sans" color='#F9C23C'>(⚷) customer_id</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- order_status</td> </tr><tr> <td align="left">- order_purchase_timestamp</td> </tr><tr> <td align="left">- order_approved_at</td> </tr><tr> <td align="left">- order_delivered_carrier_date</td> </tr><tr> <td align="left">- order_delivered_customer_date</td> </tr><tr> <td align="left">- order_estimated_delivery_date</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_order_items_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_order_items_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="order_id" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ order_id</font></b></td> </tr><tr> <td port="product_id" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ product_id</font></b></td> </tr><tr> <td port="seller_id" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ seller_id</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- order_item_id</td> </tr><tr> <td align="left">- shipping_limit_date</td> </tr><tr> <td align="left">- price</td> </tr><tr> <td align="left">- freight_value</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_order_payments_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_order_payments_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="order_id" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ order_id</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- payment_sequential</td> </tr><tr> <td align="left">- payment_type</td> </tr><tr> <td align="left">- payment_installments</td> </tr><tr> <td align="left">- payment_value</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_order_reviews_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_order_reviews_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="order_id" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ order_id</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- review_id</td> </tr><tr> <td align="left">- review_score</td> </tr><tr> <td align="left">- review_comment_title</td> </tr><tr> <td align="left">- review_comment_message</td> </tr><tr> <td align="left">- review_creation_date</td> </tr><tr> <td align="left">- review_answer_timestamp</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_products_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_products_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="product_id" align="left"><b><font face="DejaVu Sans" color='#F9C23C'>(⚷) product_id</font></b></td> </tr><tr> <td port="product_category_name" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ product_category_name</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- product_name_lenght</td> </tr><tr> <td align="left">- product_description_lenght</td> </tr><tr> <td align="left">- product_photos_qty</td> </tr><tr> <td align="left">- product_weight_g</td> </tr><tr> <td align="left">- product_length_cm</td> </tr><tr> <td align="left">- product_height_cm</td> </tr><tr> <td align="left">- product_width_cm</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_sellers_dataset [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>olist_sellers_dataset</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="seller_id" align="left"><b><font face="DejaVu Sans" color='#F9C23C'>(⚷) seller_id</font></b></td> </tr><tr> <td port="seller_zip_code_prefix" align="left"><b><font face="DejaVu Sans" color='gray'>⚷⚷ seller_zip_code_prefix</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- seller_city</td> </tr><tr> <td align="left">- seller_state</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	product_category_name_translation [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                                <tr> <td> <b>product_category_name_translation</b> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td port="product_category_name" align="left"><b><font face="DejaVu Sans" color='#F9C23C'>(⚷) product_category_name</font></b></td> </tr> </table> </td> </tr>
+                                <tr> <td> <table border="0" cellborder="0" cellspacing="0" > <tr> <td align="left">- product_category_name_english</td> </tr> </table> </td> </tr>
+                        </table>> fontname=Helvetica fontsize=7 shape=rect]
+	olist_orders_dataset:customer_id -> olist_customers_dataset:customer_id
+	olist_customers_dataset:customer_zip_code_prefix -> olist_geolocation_dataset:geolocation_zip_code_prefix
+	olist_sellers_dataset:seller_zip_code_prefix -> olist_geolocation_dataset:geolocation_zip_code_prefix
+	olist_order_items_dataset:order_id -> olist_orders_dataset:order_id
+	olist_order_payments_dataset:order_id -> olist_orders_dataset:order_id
+	olist_order_reviews_dataset:order_id -> olist_orders_dataset:order_id
+	olist_customers_dataset:customer_id -> olist_orders_dataset:customer_id
+	olist_order_items_dataset:product_id -> olist_products_dataset:product_id
+	olist_order_items_dataset:seller_id -> olist_sellers_dataset:seller_id
+	olist_products_dataset:product_category_name -> product_category_name_translation:product_category_name
+	nodesep=1.5 ranksep=1.5
+}
